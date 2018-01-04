@@ -22,7 +22,7 @@ class S3Client {
 
   private   val s3client = s3clientBuilder.build()
 
-  def putObject(filePath: String, file: java.io.File) : PutObjectResult = {
-    return s3client.putObject("test-scala-api", filePath, file)
+  def putObject(filePath: String, content: String) : PutObjectResult = {
+    return s3client.putObject("test-scala-api", filePath, content)
   }
 }
